@@ -26,3 +26,31 @@ Se você está olhando para as linhas que aparecem no console, como:
 51.4ms (Milissegundos): É a Velocidade (Inference Speed). É o tempo que o seu computador levou para "pensar" e identificar o palete naquela foto.
 
 Dica: Como 1 segundo tem 1000ms, se ele faz em 50ms, ele consegue processar cerca de 20 imagens por segundo (20 FPS), o que é ótimo para tempo real!
+# Detecção de Paletes em Tempo Real com YOLOv8 e Intel RealSense D415
+
+Este projeto consiste em um sistema de visão computacional capaz de identificar paletes em tempo real utilizando o modelo de deep learning **YOLOv8** e a câmera de profundidade **Intel RealSense D415**.
+
+## 🚀 Funcionalidades
+* Detecção automatizada de paletes em ambientes logísticos.
+* Processamento de vídeo em tempo real (média de 20 FPS).
+* Integração direta com o SDK da Intel RealSense (extração de frames RGB).
+* Alta precisão com índices de confiança superiores a 85%.
+
+## 🛠️ Tecnologias Utilizadas
+* **Python 3.12+**
+* **YOLOv8 (Ultralytics)**: Arquitetura de detecção de objetos.
+* **Roboflow**: Gestão, anotação e exportação do dataset.
+* **Intel RealSense SDK (pyrealsense2)**: Captura de dados da câmera D415.
+* **OpenCV**: Processamento de imagem e interface visual.
+
+## 📦 Estrutura do Projeto
+```text
+├── datasets/           # Imagens e labels de treino (YOLOv8 format)
+├── runs/               # Resultados e pesos do treinamento
+│   └── detect/
+│       └── train/
+│           └── weights/
+│               └── best.pt  # Melhor modelo treinado
+├── treinar.py          # Script de treinamento do modelo
+├── teste_camera.py     # Script de inferência em tempo real com RealSense
+└── README.md
