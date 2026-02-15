@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['pallet']
+
+roboflow:
+  workspace: palletdetection-ybeyb
+  project: pallet_fnal
+  version: 1
+  license: Private
+  url: https://app.roboflow.com/palletdetection-ybeyb/pallet_fnal/1
